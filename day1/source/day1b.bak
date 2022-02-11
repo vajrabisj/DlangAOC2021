@@ -1,0 +1,32 @@
+import std.stdio;
+import std.string;
+import std.range;
+import std.range.primitives;
+import std.algorithm.iteration;
+import std.algorithm.mutation;
+
+void main()
+{
+	File inputfile = File("input.txt","r");
+	int[] amt;
+	int j=0;
+	int i;
+	int[] sumamt, diffamt;
+	while(!inputfile.eof()){
+		inputfile.readf("%d ", &i);
+		j++;
+		amt ~= i;
+	}
+	writeln("there are ", amt.length, " elements in the array now.");
+	writeln("starting to operate on slice now...");
+	j=0;
+	while(amt.length >=3){
+		sumamt ~= sum(amt.take(3));
+		j++;
+		if(j>1) {diffamt ~= sumamt[j-1] - sumamt[j-2];}
+		amt = amt.remove(0);
+	}
+	writeln("finishing... now the amt length is: ", amt.length, " and sumamt length is: ", sumamt.length, " and diffamt length is ", diffamt.length);
+	auto results = filter!(x=> x>0)(diffamt);
+	writeln("there are ", results.walkLength, " posi diff.");
+}

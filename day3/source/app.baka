@@ -1,0 +1,19 @@
+import std.stdio, std.range, std.algorithm, std.string, std.conv, std.array;
+
+void main()
+{
+	char[] ubg,ube;
+	auto staterange = File("input.txt").byLineCopy.filter!(l => !l.empty).array;
+	pragma(msg,typeof(staterange));
+	//foreach(line; File("input.txt").byLine.map!(a=>a.idup.strip).array.transposed){ //option1
+	foreach(line; staterange.transposed){ //option2
+		auto sortgroup = line.array.sort.group.assocArray;
+		writeln(sortgroup);
+		(sortgroup['1']>sortgroup['0']) ? (ubg ~= '1') : (ubg ~= '0'); //todo: update the staterange, and loop 
+		(sortgroup['1']>sortgroup['0']) ? (ube ~= '0') : (ube ~= '1');
+	}
+	writeln("gamma is: ", ubg);
+	writeln("epsilon is: ", ube);
+	auto ubgr = to!int(ubg, 2)*to!int(ube,2);
+	writeln("result is: ", ubgr);	
+}

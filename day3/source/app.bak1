@@ -1,0 +1,43 @@
+/*auto inputfile = File("input.txt");
+	char[5][12] lcs; char[] css; char[12][5] slcs; int j,i=0;
+	while(!inputfile.eof()){
+		/*inputfile.readf("%c", &cs); css ~= cs;
+		inputfile.readln();
+		inputfile.readln(css);
+		lcs[][i] = strip(css).dup; i++;
+		//writeln(lcs);
+	}
+	/*for(i=0;i<5;i++){
+		for(j=0;j<12;j++){
+			slcs[i][j] = lcs[j][i];
+			//write(lcs[j][i]); 
+		}
+	}
+	writeln(lcs[]);
+	auto r = lcs[].map!((ref a) => a[]).array.transposed;
+	pragma(msg,typeof(r));
+    writeln(r[0].sort()); 
+	writeln(sortgroup);*/
+	/*(sortgroup['1']>sortgroup['0']) ? writeln("1 of ", sortgroup['1'], " win!") : writeln("0 of ", sortgroup['0'], " win!");*/
+	//auto lines = inputfile.byLine(); //writeln(lines);
+	/*int i=0,j=0; char[5] c01; char[5][12] clist;
+	auto llist = lines.take(12).map!(x=>strip(x)); writeln(llist);
+	pragma(msg, typeof(llist));
+	auto slines = c01.splitLines; writeln(slines);
+	pragma(msg, typeof(slines));
+	//char[][] cllist = llist;
+	//writeln(llist); //cannot print, llist will be consumed!
+	/*foreach(sline;llist){
+		write("line: ");
+		foreach(c;sline){
+			write(c);
+			c01[i] = c; i++;
+		}
+		i=0;
+		writeln();
+		clist[][j] = c01;
+		j++;
+	}
+	writeln(clist);
+	pragma(msg, typeof(clist));
+	writeln(clist);*/

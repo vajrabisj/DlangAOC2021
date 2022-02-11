@@ -1,0 +1,9 @@
+{
+	"authors": [
+		"Michael.Bi"
+	],
+	"copyright": "Copyright © 2022, Michael.Bi",
+	"description": "AOC in D",
+	"license": "proprietary",
+	"name": "day5"
+}

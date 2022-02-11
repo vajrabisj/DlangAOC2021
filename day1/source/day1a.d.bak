@@ -1,0 +1,22 @@
+import std.stdio;
+import std.string;
+
+void main()
+{
+	File inputfile = File("input.txt","r");
+	int[] amt;
+	int n, j=0;
+	int i, diff;
+	while(!inputfile.eof()){
+		//string line = strip(inputfile.readln());
+		inputfile.readf("%d ", &i);
+		j++;
+		amt ~= i;
+		//writeln(j, ": ", amt[j-1]);
+		if(j>1){
+			diff = amt[j-1]-amt[j-2];
+			(diff>0) ? writeln("posi diff + ", ++n) : writeln("neg diff, leave");
+		}
+		//writeln(amt);
+	}
+}
